@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export const Greet = () => {
+export const Greet = ({size}) => {
   const [lang, setLang] = useState('Good Morning')
 
 const Spanish = () =>{
@@ -20,7 +20,7 @@ const Portuguese = () =>{
 }
   return (
     <div className="header">
-       <h1>{lang}</h1>
+       <h1 style={{'fontSize': `${size}px`}}>{lang}</h1>
   <button onClick={English}>English</button>
   <button onClick={Spanish}>Spanish</button>
   <button onClick={Chinese}>Chinese</button>
@@ -30,11 +30,18 @@ const Portuguese = () =>{
  
   )
 }
-export const Size = () => {
+export const Size = ({size, setSize}) => {
+ 
+  const upSize =()=>{
+    setSize(size + 1)
+  }
+  const downSize = () =>{
+    setSize(size - 1)
+  }
   return (
     <div className="sizes">
-      <button>+</button>
-      <button>-</button>
+      <button onClick={upSize}>+</button>
+      <button onClick={downSize}>-</button>
     </div>
   )
 }
