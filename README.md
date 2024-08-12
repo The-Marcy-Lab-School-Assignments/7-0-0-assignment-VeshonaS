@@ -34,7 +34,7 @@ Your goal is to meet at least 75% of these requirements to complete the assignme
 - [x] When the buttons are clicked, the greeting size should grow or shrink accordingly. 
 
 **React Fundamentals**
-- [ ] Component names use PascalCase (`MyComponent` instead of `myComponent`)
+- [x] Component names use PascalCase (`MyComponent` instead of `myComponent`)
 - [x] Props are extracted in child components using destructuring
 - [x] `useState` is used to manage state
 
